@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
         Toast.makeText(this, "回调的是Activity:", Toast.LENGTH_SHORT).show();
+        
         PermissionUtils.requestPermissionsResult(this, requestCode, permissions, grantResults,mGrant);
     }
 }
